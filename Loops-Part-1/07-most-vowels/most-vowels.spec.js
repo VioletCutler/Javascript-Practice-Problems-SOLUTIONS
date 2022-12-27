@@ -1,4 +1,4 @@
-xdescribe('mostVowels', () => {
+describe('mostVowels', () => {
 
   it('is a function', () => {
     expect(typeof mostVowels).toEqual('function');

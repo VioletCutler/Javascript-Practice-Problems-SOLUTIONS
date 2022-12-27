@@ -1,4 +1,4 @@
-xdescribe('exponentiate', () => {
+describe('exponentiate', () => {
 
   it('is a function', () => {
     expect(typeof exponentiate).toEqual('function');

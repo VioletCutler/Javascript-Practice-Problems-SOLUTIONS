@@ -1,4 +1,4 @@
-xdescribe('onlyOdds', () => {
+describe('onlyOdds', () => {
 
   it('is a function', () => {
     expect(typeof onlyOdds).toEqual('function');

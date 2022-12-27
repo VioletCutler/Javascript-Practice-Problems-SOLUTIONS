@@ -1,4 +1,4 @@
-xdescribe('bacteriaTime', () => {
+describe('bacteriaTime', () => {
 
   it('is a function', () => {
     expect(typeof bacteriaTime).toEqual('function');

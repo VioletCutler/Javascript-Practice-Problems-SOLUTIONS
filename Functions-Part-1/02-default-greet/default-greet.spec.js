@@ -1,4 +1,4 @@
-xdescribe('defaultGreet', () => {
+describe('defaultGreet', () => {
 
   it('is a function', () => {
     expect(typeof defaultGreet).toEqual('function');
