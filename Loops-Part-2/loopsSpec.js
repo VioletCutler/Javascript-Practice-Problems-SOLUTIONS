@@ -1,7 +1,7 @@
 /* eslint-env jasmine */
 /* eslint-disable no-undef */
 
-xdescribe('Looping', () => {
+describe('Looping', () => {
   // Let's repeat ourselves several times
   describe('The function `repeat`', () => {
     it('returns an empty string with 0 repeats', () => {
@@ -41,22 +41,22 @@ xdescribe('Looping', () => {
   });
 
   // Let's iterate over all the elements of an array using a loop
-  describe('the function `sum`', () => {
+  describe('the function `loopSum`', () => {
     it('computes the sum of an empty array', () => {
       //Again, this statement tells us a lot about `sum`, the function we are creating
-      expect(sum([])).toEqual(0);
+      expect(loopSum([])).toEqual(0);
     });
 
     it('computes the sum of an array of one number', () => {
-      expect(sum([7])).toEqual(7);
+      expect(loopSum([7])).toEqual(7);
     });
 
     it('computes the sum of an array of two numbers', () => {
-      expect(sum([7, 11])).toEqual(18);
+      expect(loopSum([7, 11])).toEqual(18);
     });
 
     it('computes the sum of an array of many numbers', () => {
-      expect(sum([1, 3, 5, 7, 9])).toEqual(25);
+      expect(loopSum([1, 3, 5, 7, 9])).toEqual(25);
     });
   });
 
@@ -139,7 +139,7 @@ xdescribe('Looping', () => {
   Here we have to also be aware of properties that are on an object's internal prototype (.__proto__)
 */
 
-xdescribe('looping over objects', () => {
+describe('looping over objects', () => {
   describe('the function `paramify`', () => {
     it('works on an empty object', () => {
       expect(paramify({})).toEqual('');

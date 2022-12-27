@@ -1,4 +1,4 @@
-xdescribe('oddJob', () => {
+describe('oddJob', () => {
 
   it('returns true', () => {
     let returnedValue = oddJob();
@@ -8,7 +8,7 @@ xdescribe('oddJob', () => {
 });
 
 
-xdescribe('goldFinger', () => {
+describe('goldFinger', () => {
 
   it('returns true', () => {
     let returnedValue = goldFinger();
@@ -18,7 +18,7 @@ xdescribe('goldFinger', () => {
 });
 
 
-xdescribe('scaramanga', () => {
+describe('scaramanga', () => {
 
   it('returns true', () => {
     let returnedValue = scaramanga();
@@ -28,7 +28,7 @@ xdescribe('scaramanga', () => {
 });
 
 
-xdescribe('drNo', () => {
+describe('drNo', () => {
 
   it('returns true', () => {
     let returnedValue = drNo();
@@ -38,7 +38,7 @@ xdescribe('drNo', () => {
 });
 
 
-xdescribe('jaws', () => {
+describe('jaws', () => {
 
   it('returns true', () => {
     let returnedValue = jaws();
@@ -47,7 +47,7 @@ xdescribe('jaws', () => {
 
 });
 
-xdescribe('elChiffre', () => {
+describe('elChiffre', () => {
 
   it('returns true', () => {
     let returnedValue = elChiffre();

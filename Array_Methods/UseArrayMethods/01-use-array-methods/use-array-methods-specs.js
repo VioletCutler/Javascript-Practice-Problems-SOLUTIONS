@@ -1,7 +1,7 @@
 /* eslint-env jasmine */
 /* eslint-disable no-undef */
 
-xdescribe('using map', () => {
+describe('using map', () => {
   describe('indexAndValue', () => {
     it('create the function indexAndValue that returns an array', () => {
       expect(Array.isArray(indexAndValue([22, 33, 44, 55]))).toBe(true);
@@ -73,7 +73,7 @@ xdescribe('using map', () => {
   });
 });
 
-xdescribe('using filter', () => {
+describe('using filter', () => {
   describe('extensionSearch', () => {
     it('returns an array', () => {
       expect(
@@ -118,7 +118,7 @@ xdescribe('using filter', () => {
   });
 });
 
-xdescribe('using reduce', () => {
+describe('using reduce', () => {
   describe('getPopulation', () => {
     const arrayOfCountries = [
       { name: 'China', population: 1386395000 },
@@ -321,78 +321,6 @@ xdescribe('using reduce', () => {
         expect(Array.prototype.map.calls.count()).toBe(0);
       });
     });
-
-    describe('recreate map using reduce', () => {
-      it('returns an array', () => {
-        const mappedArray = mapReduce([1, 2, 3], (val) => {
-          return val * 2;
-        });
-        expect(Array.isArray(mappedArray)).toBe(true);
-      });
-
-      it('returns a mapped array (it applies the function argument to every value in the array and returns a new array)', () => {
-        const mappedArray = mapReduce([1, 2, 3], (val) => {
-          return val * 2;
-        });
-        expect(mappedArray).toEqual([2, 4, 6]);
-
-        expect(
-          mapReduce(['jupiter', 'pluto', 'mars', 'sun', 'earth'], (val) => {
-            return val.toUpperCase();
-          })
-        ).toEqual(['JUPITER', 'PLUTO', 'MARS', 'SUN', 'EARTH']);
-      });
-
-      it('mapReduce uses Array.prototype.reduce and do NOT use Array.prototype.map', () => {
-        spyOn(Array.prototype, 'reduce').and.callThrough();
-        spyOn(Array.prototype, 'map').and.callThrough();
-        expect(
-          mapReduce([true, false, true, true], (boolean) => {
-            return !boolean;
-          })
-        ).toEqual([false, true, false, false]);
-
-        expect(Array.prototype.reduce).toHaveBeenCalled();
-        expect(Array.prototype.map.calls.count()).toBe(0);
-      });
-    });
-
-    describe('recreate filter using reduce', () => {
-      it('returns an array', () => {
-        const filteredArray = filterReduce([1, 2, 3], (val) => {
-          return val <= 2;
-        });
-        expect(Array.isArray(filteredArray)).toBe(true);
-      });
-
-      it('returns a filtered array', () => {
-        const filteredArray = filterReduce([1, 2, 3], (val) => {
-          return val <= 2;
-        });
-        expect(filteredArray).toEqual([1, 2]);
-
-        expect(
-          filterReduce(['steel', 'bronze', 'silver', 'iron'], (val) => {
-            return val.length >= 6;
-          })
-        ).toEqual(['bronze', 'silver']);
-      });
-
-      it('filterReduce uses Array.prototype.reduce and does not use Array.prototype.filter', () => {
-        spyOn(Array.prototype, 'reduce').and.callThrough();
-        spyOn(Array.prototype, 'filter').and.callThrough();
-
-        expect(
-          filterReduce([true, false, true, false], (boolean) => {
-            return boolean === false;
-          })
-        ).toEqual([false, false]);
-
-        expect(Array.prototype.reduce).toHaveBeenCalled();
-        expect(Array.prototype.filter.calls.count()).toBe(0);
-      });
-    });
-  });
 
   describe('method chaining', () => {
     describe('inYourBudget', () => {

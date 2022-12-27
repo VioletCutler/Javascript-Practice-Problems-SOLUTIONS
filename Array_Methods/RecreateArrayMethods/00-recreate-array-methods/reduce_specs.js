@@ -41,7 +41,7 @@ describe('mapReduce', () => {
   });
 });
 
-xdescribe('everyReduce', () => {
+describe('everyReduce', () => {
   it('returns true if the array is empty', () => {
     expect(
       everyReduce([], (val) => {

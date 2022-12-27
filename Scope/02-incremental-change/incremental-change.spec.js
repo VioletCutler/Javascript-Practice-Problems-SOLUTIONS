@@ -1,4 +1,4 @@
-xdescribe('incrementalChange', () => {
+describe('incrementalChange', () => {
 
   // set the global counter variable to 0 before each test
   beforeEach(() => {

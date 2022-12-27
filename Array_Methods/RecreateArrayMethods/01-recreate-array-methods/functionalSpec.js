@@ -15,7 +15,7 @@ Warmup - Re-Implement the Array.prototype.forEach method
 
 */
 
-xdescribe('the function forEach', () => {
+describe('the function forEach', () => {
   beforeEach(() => {
     // A spy is set to check if Array.prototype.forEach is called
     spyOn(Array.prototype, 'forEach').and.callThrough();
@@ -40,7 +40,7 @@ Re-Implement the Array.prototype.map method
 
 */
 
-xdescribe('the function map', () => {
+describe('the function map', () => {
   beforeEach(() => {
     // A spy is set to check if Array.prototype.map is called
     spyOn(Array.prototype, 'map').and.callThrough();
@@ -100,7 +100,7 @@ xdescribe('the function map', () => {
    array with the same length as the original)
 */
 
-xdescribe('the function filter', () => {
+describe('the function filter', () => {
   beforeEach(() => {
     spyOn(Array.prototype, 'filter').and.callThrough();
   });
@@ -131,7 +131,7 @@ xdescribe('the function filter', () => {
 });
 
 // the includes determines whether an array includes a certain element, returning true or false as appropriate
-xdescribe('the function includes', () => {
+describe('the function includes', () => {
   beforeEach(() => {
     // You can't use the built in `Array.prototype.includes`
     spyOn(Array.prototype, 'includes').and.callThrough();
@@ -162,7 +162,7 @@ xdescribe('the function includes', () => {
 });
 
 // countWords is a pure function
-xdescribe("the function countWords is a utility function we'll need soon", () => {
+describe("the function countWords is a utility function we'll need soon", () => {
   it('the first argument is the starting value of the total count', () => {
     expect(countWords(0, 'count the words')).toBe(3);
     expect(countWords(10, 'two words')).toBe(12);
@@ -176,7 +176,7 @@ xdescribe("the function countWords is a utility function we'll need soon", () =>
 
 // reduce takes a collection and combines/accumulates the values in the collection to a single value (the final value could be a string, number, object, etc...)
 // Here is the method you are creating a variation of: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-xdescribe('the function reduce', () => {
+describe('the function reduce', () => {
   let wordArray;
 
   beforeEach(() => {
@@ -201,7 +201,7 @@ xdescribe('the function reduce', () => {
 });
 
 // Use reduce inside a sum function that takes an array of integers
-xdescribe('the sum function', () => {
+describe('the sum function', () => {
   it('uses reduce to add up the numbers in an array', () => {
     expect(sum([1, 2, 3])).toBe(6);
   });
@@ -212,7 +212,7 @@ xdescribe('the sum function', () => {
   The functions every and any **should use the reduce function you created earlier**
   to combine the collections into a true or false value.
 */
-xdescribe('the function every', () => {
+describe('the function every', () => {
   // `every` tests if every element in this array passes the condition in the function
   // If all the values pass the condition, `every` returns `true`
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
@@ -250,7 +250,7 @@ xdescribe('the function every', () => {
   });
 });
 
-xdescribe('the function some', () => {
+describe('the function some', () => {
   // if ONE value passes the condition, some returns true
   // this is similar to the every function, but only one value needs to meet the
   // condition of the callback function.

@@ -1,4 +1,4 @@
-xdescribe('taxCalculator', () => {
+describe('taxCalculator', () => {
 
   it('is a function', () => {
     expect(typeof taxCalculator).toEqual('function');

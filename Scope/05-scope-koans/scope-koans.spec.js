@@ -1,4 +1,4 @@
-xdescribe('testOne', () => {
+describe('testOne', () => {
 
   it('returns test succeeding', () => {
     let returnedValue = testOne('test succeeding');
@@ -8,7 +8,7 @@ xdescribe('testOne', () => {
 });
 
 
-xdescribe('testTwo', () => {
+describe('testTwo', () => {
 
   it('returns test succeeding', () => {
     let returnedValue = testTwo();
@@ -18,7 +18,7 @@ xdescribe('testTwo', () => {
 });
 
 
-xdescribe('testThree', () => {
+describe('testThree', () => {
 
   it('returns test succeeding', () => {
     let returnedValue = testThree(true);
@@ -28,7 +28,7 @@ xdescribe('testThree', () => {
 });
 
 
-xdescribe('testFour', () => {
+describe('testFour', () => {
 
   it('returns test succeeding', () => {
     let returnedValue = testFour('test failing');

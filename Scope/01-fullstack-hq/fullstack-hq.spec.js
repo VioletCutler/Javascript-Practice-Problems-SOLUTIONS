@@ -1,4 +1,4 @@
-xdescribe('fullstackHQ', () => {
+describe('fullstackHQ', () => {
 
   it('is a function', () => {
     expect(typeof fullstackHQ).toEqual('function');
